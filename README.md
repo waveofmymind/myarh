@@ -8,9 +8,9 @@
 
 ![image](https://user-images.githubusercontent.com/93868431/216944449-49d25ef3-5339-4b16-ad3f-26e509973e74.png)
 
-문제 엔티티는 리뷰 엔티티와 일대다 관계
+- Problem - Review: 일대다 관계
 
-태그와는 다대다 관계가 되기 때문에, 중간에 ProblemTag를 두어 다대다 관계를 각각 일대다, 다대일 관계로 풀어냈습니다.
+- Problem - Problem Tag - Tag: Problem과 Tag는 관계를 직접적으로 연결시킬경우 다대다 관계이기 때문에, 중간에 Problem Tag를 두어 각각 일대다, 다대일로 풀어냈습니다.
 
 
 ## 주요 기능
