@@ -4,7 +4,7 @@ jdk:
 
 branches:
   only:
-    - main
+    - master
 
 before_install:
   - chmod +x gradlew
