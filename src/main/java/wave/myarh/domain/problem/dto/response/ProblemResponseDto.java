@@ -26,5 +26,5 @@ public class ProblemResponseDto {
     private List<Review> reviewList;
 
     @JsonIgnoreProperties({"problem"})
-    private List<ProblemTag> tagList;
+    private List<ProblemTag> problemTagList;
 }
