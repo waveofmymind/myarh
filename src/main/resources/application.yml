@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://wavedatabase.cpg0bs4xqbye.ap-northeast-2.rds.amazonaws.com:3306/arh2?serverTimezone=UTC&characterEncoding=UTF-8
+    username: waveofmymind
+    password: 09139349
+
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        use_sql_comments: true
+        show_sql: true
+        format_sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
