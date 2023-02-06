@@ -1,4 +1,4 @@
-package wave.myarh.domain.problem;
+package wave.myarh.domain.problem.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
