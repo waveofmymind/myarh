@@ -25,6 +25,10 @@
 
 - 문제 조회
 
+## 트러블 슈팅
+
+- MapStruct 사용하여 Mapper 인터페이스 선언하였으나, DTO - 엔티티간 매핑 안되는 이슈 발생(NPE)
+
 ## 레퍼런스
 
 - [패키징 구조 - 도메인 집중형](https://github.com/cheese10yun/spring-guide/blob/master/docs/directory-guide.md)
