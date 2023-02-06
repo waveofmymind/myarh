@@ -29,6 +29,8 @@
 
 - MapStruct 사용하여 Mapper 인터페이스 선언하였으나, DTO - 엔티티간 매핑 안되는 이슈 발생(NPE)
 
+- Travis Ci 사용중 유료화로 인한 CI/CD Github Actions
+
 ## 레퍼런스
 
 - [패키징 구조 - 도메인 집중형](https://github.com/cheese10yun/spring-guide/blob/master/docs/directory-guide.md)
