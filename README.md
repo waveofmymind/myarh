@@ -2,7 +2,46 @@
 
 해당 프로젝트는 기존에 진행했던 알고리즘 리뷰 도우미 프로젝트를 스프링부트 3.0.2로 리팩토링하는 프로젝트입니다
 
-프로젝트를 도커라이징하고, 젠킨스를 통한 CI/CD 파이프라인 구축을 해서 프로젝트를 관리합니다.
+## 목차
+
+- [기술 스택](#기술-스택)
+
+- 아키텍처
+
+- [프로젝트 구조](프로젝트-구조)
+
+- [ERD](#엔티티-관계-다이어그램)
+
+- 서비스 별 시퀀스 다이어그램 (노션 링크)
+
+- 기능 설명(간단히)
+
+- 테스트 코드 ( 단위테스트 , 통합테스트 )
+
+- 기술적 도전
+
+- 트러블 슈팅
+
+- 프로젝트 진행하면서 학습한 내용
+
+- 마주친 에러와 조치 내용 
+
+## 기술 스택
+
+- Java 17
+- Spring Boot 3.0.2
+- Spring Data JPA
+- Querydsl
+- MySQL
+- Lombok
+- Validation
+- MapStruct
+
+
+## 프로젝트 구조
+
+![image](https://user-images.githubusercontent.com/93868431/218382249-b5b5eb47-92ee-4cda-bd46-7ad1bdc47e3f.png)
+
 
 ## 엔티티 관계 다이어그램
 
@@ -35,9 +74,3 @@ tagList는 List<String>의 형태로 request를 받습니다.
 ## 레퍼런스
 
 - [패키징 구조 - 도메인 집중형](https://github.com/cheese10yun/spring-guide/blob/master/docs/directory-guide.md)
-
-##환경
-
-Java 17
-
-Spring Boot 3.0.2
