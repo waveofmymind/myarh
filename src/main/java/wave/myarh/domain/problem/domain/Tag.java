@@ -1,25 +1,20 @@
-package wave.myarh.domain.tag.domain;
+package wave.myarh.domain.problem.domain;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-@Getter
 @Entity
-@Builder
+@Table(name="tag")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tag_id")
     private Long id;
 
-    @Column(unique = true)
     private String tagName;
-
     public Tag(String tagName) {
         this.tagName = tagName;
     }
-
 }
