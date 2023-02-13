@@ -50,6 +50,12 @@ public class ProblemService {
         return problemMapper.toDto(problem);
     }
 
+    public void deleteProblem(Long problemId) {
+        problemRepository.deleteById(problemId);
+    }
+
+
+
 
 
 }
