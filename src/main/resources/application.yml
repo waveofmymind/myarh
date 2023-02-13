@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://wavedatabase.cpg0bs4xqbye.ap-northeast-2.rds.amazonaws.com:3306/arh2?serverTimezone=UTC&characterEncoding=UTF-8
-    username: waveofmymind
-    password: 09139349
+    url: jdbc:mysql://localhost:3306/arh?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: 0913
 
   mvc:
     path match:

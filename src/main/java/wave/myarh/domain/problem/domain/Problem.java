@@ -4,9 +4,11 @@ import jakarta.persistence.*;
 import lombok.*;
 import wave.myarh.domain.BaseEntity;
 import wave.myarh.domain.review.domain.Review;
-import wave.myarh.domain.tag.domain.ProblemTag;
+
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Entity
@@ -33,5 +35,13 @@ public class Problem extends BaseEntity {
     @Builder.Default
     @OneToMany(mappedBy = "problem",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     private List<Review> reviewList = new ArrayList<>();
+
+    public void setReview(Review review) {
+        this.reviewList = Collections.singletonList(review);
+    }
+    public void setProblemTagList(List<ProblemTag> problemTagList)
+    {
+        this.problemTagList = problemTagList;
+    }
 
 }

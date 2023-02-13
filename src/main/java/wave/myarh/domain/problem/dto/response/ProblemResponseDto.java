@@ -2,8 +2,9 @@ package wave.myarh.domain.problem.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
+import wave.myarh.domain.problem.domain.ProblemTag;
 import wave.myarh.domain.review.domain.Review;
-import wave.myarh.domain.tag.domain.ProblemTag;
+
 
 import java.util.List;
 
