@@ -9,6 +9,9 @@ import wave.myarh.domain.review.domain.Review;
 @Mapper(componentModel = "spring")
 public interface ReviewMapper {
 
-    @Mapping(target = "content",source="content")
-    Review toEntity(ProblemRequestDto requestDto, Problem problem);
+    @Mapping(target="problem", source = "problem")
+    @Mapping(target = "id",ignore = true)
+    Review toEntity(ProblemRequestDto requestDto,Problem problem);
+
+
 }
