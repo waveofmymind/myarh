@@ -1,11 +1,13 @@
 package wave.myarh.domain.problem.domain;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table(name="tag")
+@Getter
+@AllArgsConstructor
+@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Tag {
 

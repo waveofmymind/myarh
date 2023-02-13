@@ -4,6 +4,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import wave.myarh.domain.problem.ProblemMapper;
 import wave.myarh.domain.problem.domain.Problem;
 import wave.myarh.domain.problem.domain.ProblemTag;
@@ -21,6 +22,7 @@ import java.util.Optional;
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class ProblemService {
 
     private final ProblemRepository problemRepository;
@@ -28,7 +30,7 @@ public class ProblemService {
 
     private final ProblemMapper problemMapper;
     private final ReviewMapper reviewMapper;
-
+    @Transactional
     public Long registerProblem(ProblemRequestDto requestDto) {
         Problem problem = problemMapper.toEntity(requestDto);
         Review review = reviewMapper.toEntity(requestDto,problem);
