@@ -27,6 +27,11 @@ public class ProblemApiController {
         ProblemResponseDto responseDto = problemService.findProblemById(problemId);
 
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_조회_성공",responseDto));
+    }
 
+    @DeleteMapping("/{problemId}")
+    public ResponseEntity<?> deleteProblem(@PathVariable("problemId") Long problemId) {
+        problemService.deleteProblem(problemId);
+        return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_삭제_성공"));
     }
 }
