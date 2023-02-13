@@ -70,7 +70,7 @@ tagList는 List<String>의 형태로 request를 받습니다.
 
 ## 마주친 에러와 조치 내용 
 
-- MapStruct 사용하여 Mapper 인터페이스 선언하였으나, DTO - 엔티티간 매핑 안되는 이슈 발생(NPE)
+- [MapStruct 사용하여 Mapper 인터페이스 선언하였으나, DTO - 엔티티간 매핑 안되는 이슈 발생(NPE)](https://waveofymymind.tistory.com/74)
 
 ## 레퍼런스
 
