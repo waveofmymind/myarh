@@ -1,6 +1,6 @@
 # Algorithms Review Blog
 
-해결한 알고리즘을 풀이와 함께 저장할 수 있는 API 
+해결한 알고리즘을 풀이와 함께 저장할 수 있는  API 
 
 ## 목차
 
@@ -67,10 +67,13 @@ tagList는 List<String>의 형태로 request를 받습니다.
 
 ## 트러블 슈팅
 
+
+## 마주친 에러와 조치 내용 
+
 - MapStruct 사용하여 Mapper 인터페이스 선언하였으나, DTO - 엔티티간 매핑 안되는 이슈 발생(NPE)
 
-- Travis Ci 사용중 유료화로 인한 CI/CD Github Actions
-
 ## 레퍼런스
+
+- [Git Flow](https://gyoogle.dev/blog/github/Git%20vs%20GitHub%20vs%20GitLab%20Flow.html)
 
 - [패키징 구조 - 도메인 집중형](https://github.com/cheese10yun/spring-guide/blob/master/docs/directory-guide.md)
