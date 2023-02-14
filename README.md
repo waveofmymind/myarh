@@ -65,6 +65,11 @@ tagList는 List<String>의 형태로 request를 받습니다.
 
 - 문제 조회
 
+## 기술적 도전
+
+- @ControllerAdvice, @ExceptionHandler를 활용한 예외처리
+
+
 ## 트러블 슈팅
 
 - Entity를 레이어간 정보 이동에 사용할 시, 민감하거나 불필요한 정보가 오가며, 의존성이 생길수도 있다고 생각했다.
