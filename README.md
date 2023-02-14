@@ -39,7 +39,6 @@
 
 ## 아키텍처
 
-![image](https://user-images.githubusercontent.com/93868431/218633669-ca3b69be-b220-440c-8ba7-582dc45420cf.png)
 
 
 
