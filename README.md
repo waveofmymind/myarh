@@ -1,4 +1,5 @@
-# Algorithms Review Blog
+# Algorithm Review Board
+
 
 해결한 알고리즘을 풀이와 함께 저장할 수 있는  API 
 
@@ -31,7 +32,6 @@
 - Java 17
 - Spring Boot 3.0.2
 - Spring Data JPA
-- Querydsl
 - MySQL
 - Lombok
 - Validation
