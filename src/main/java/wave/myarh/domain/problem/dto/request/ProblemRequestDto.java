@@ -15,19 +15,15 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class ProblemRequestDto {
-
     @NotBlank
     private String title;
-
     @NotNull
     private String link;
-
     private int level;
-
     @NotNull
     private ArrayList<String> tagList;
-
     @NotBlank
     private String content;
-
 }
+
+
