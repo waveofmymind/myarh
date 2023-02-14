@@ -6,7 +6,7 @@
 
 - [기술 스택](#기술-스택)
 
-- 아키텍처
+- [아키텍처](#아키텍처)
 
 - [프로젝트 구조](프로젝트-구조)
 
@@ -36,6 +36,11 @@
 - Lombok
 - Validation
 - MapStruct
+
+## 아키텍처
+
+![image](https://user-images.githubusercontent.com/93868431/218633669-ca3b69be-b220-440c-8ba7-582dc45420cf.png)
+
 
 
 ## 프로젝트 구조
