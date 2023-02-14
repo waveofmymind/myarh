@@ -20,4 +20,14 @@ public class GlobalExceptionHandler {
         final ExceptionCode exceptionCode = e.getExceptionCode();
         return new ResponseEntity<>(ResponseApiDto.fail(exceptionCode.getStatus(),e.getMessage()), exceptionCode.getStatus());
     }
+
+    /**
+     * 예상치 못한 예외 처리
+     */
+    @ExceptionHandler(Exception.class)
+    protected ResponseEntity<ResponseApiDto<?>> handleException(final Exception e) {
+        log.error("Exception : " + e.getMessage());
+        final ExceptionCode exceptionCode = ExceptionCode.INTERNAL_SERVER_ERROR;
+        return new ResponseEntity<>(ResponseApiDto.fail(exceptionCode.getStatus(), exceptionCode.getMessage()), exceptionCode.getStatus());
+    }
 }
