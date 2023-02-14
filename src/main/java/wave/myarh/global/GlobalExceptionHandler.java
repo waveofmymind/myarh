@@ -30,4 +30,6 @@ public class GlobalExceptionHandler {
         final ExceptionCode exceptionCode = ExceptionCode.INTERNAL_SERVER_ERROR;
         return new ResponseEntity<>(ResponseApiDto.fail(exceptionCode.getStatus(), exceptionCode.getMessage()), exceptionCode.getStatus());
     }
+
+    //todo
 }
