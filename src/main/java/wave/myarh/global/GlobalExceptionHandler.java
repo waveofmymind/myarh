@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 
 
     @ExceptionHandler(BusinessException.class)
-    protected ResponseEntity<?> businessException(final BusinessException e) {
+    protected ResponseEntity<ResponseApiDto<?>> businessException(final BusinessException e) {
         log.error("Business Exception : " + e.getMessage());
         final ExceptionCode exceptionCode = e.getExceptionCode();
         return new ResponseEntity<>(ResponseApiDto.fail(exceptionCode.getStatus(),e.getMessage()), exceptionCode.getStatus());
