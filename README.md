@@ -44,7 +44,7 @@
 
 ## 프로젝트 구조
 
-![image](https://user-images.githubusercontent.com/93868431/218382249-b5b5eb47-92ee-4cda-bd46-7ad1bdc47e3f.png)
+![image](https://user-images.githubusercontent.com/93868431/218667426-753e8905-fe74-4a1a-a146-28d62028bac0.png)
 
 
 ## 엔티티 관계 다이어그램
