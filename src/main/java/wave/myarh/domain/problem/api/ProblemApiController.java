@@ -9,6 +9,8 @@ import wave.myarh.domain.problem.dto.response.ProblemResponseDto;
 import wave.myarh.domain.problem.service.ProblemService;
 import wave.myarh.global.dto.ResponseApiDto;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/problems")
@@ -24,9 +26,16 @@ public class ProblemApiController {
 
     @GetMapping("/{problemId}")
     public ResponseEntity<?> getProblem(@PathVariable("problemId") Long problemId) {
-        ProblemResponseDto responseDto = problemService.findProblemById(problemId);
+        ProblemResponseDto responseDto = problemService.getProblemById(problemId);
 
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_조회_성공",responseDto));
+    }
+
+    @GetMapping
+    public ResponseEntity<?> getProblemList() {
+        List<ProblemResponseDto> problemDtoList = problemService.getProblemList();
+
+        return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_전체_조회_성공",problemDtoList));
     }
 
     @DeleteMapping("/{problemId}")

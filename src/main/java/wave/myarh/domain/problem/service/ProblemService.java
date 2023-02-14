@@ -44,11 +44,20 @@ public class ProblemService {
         return problemRepository.save(problem).getId();
     }
 
-    public ProblemResponseDto findProblemById(Long problemId) {
+    public ProblemResponseDto getProblemById(Long problemId) {
         Problem problem = problemRepository.findById(problemId)
                 .orElseThrow(EntityNotFoundException::new);
         return problemMapper.toDto(problem);
     }
+
+    public List<ProblemResponseDto> getProblemList() {
+        List<Problem> problemList = problemRepository.findByOrderByCreatedDateDesc();
+        return problemList.stream().map(problemMapper::toDto).toList();
+    }
+
+    //페이징 리스트 todo
+
+
 
     public void deleteProblem(Long problemId) {
         problemRepository.deleteById(problemId);
