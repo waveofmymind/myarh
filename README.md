@@ -39,9 +39,6 @@
 - Validation
 - MapStruct
 
-## 아키텍처
-
-
 
 
 
