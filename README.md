@@ -42,9 +42,9 @@
 
 
 
-## 프로젝트 구조
+## 프로젝트  구조
 
-![image](https://user-images.githubusercontent.com/93868431/218667426-753e8905-fe74-4a1a-a146-28d62028bac0.png)
+![image](https://user-images.githubusercontent.com/93868431/218949577-fe7ebaf4-11f8-418f-a3d0-9aecf77e93ee.png)
 
 
 ## 엔티티 관계 다이어그램
