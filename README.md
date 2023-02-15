@@ -90,13 +90,18 @@ tagList는 List<String>의 형태로 request를 받습니다.
 
 ## 테스트 코드
 
-- 문제 등록 
+- 문제 등록 & 매핑 테스트
 
-![image](https://user-images.githubusercontent.com/93868431/218665111-9703c539-34ed-4dea-bc81-a052bcd4640f.png)
+![image](https://user-images.githubusercontent.com/93868431/218948990-3d267c94-514a-40f3-99dd-3e4ddea2957b.png)
+  
+![image](https://user-images.githubusercontent.com/93868431/218949117-e7bbafc3-a8fb-4c7a-86e1-037593d5fae1.png)
 
-- 리뷰 등록
+- 리뷰 등록 & 매핑 테스트
 
 ![image](https://user-images.githubusercontent.com/93868431/218939715-8d5bfe7b-0318-4e79-ab68-85b2ace10d5e.png)
+  
+![image](https://user-images.githubusercontent.com/93868431/218949229-7baebdeb-c37a-4b51-93db-86014f4f07c0.png)
+
 
 
 
