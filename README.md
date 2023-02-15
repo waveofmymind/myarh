@@ -17,7 +17,7 @@
 
 - [API 설계](#api-설계)
 
-- 기능 설명(간단히)
+- 기
 
 - [테스트 코드(단위테스트 , 통합테스트)](#테스트-코드)
 
@@ -64,6 +64,18 @@
 - Problem - Problem Tag - Tag: Problem과 Tag는 관계를 직접적으로 연결시킬경우 다대다 관계이기 때문에, 중간에 Problem Tag를 두어 각각 일대다, 다대일로 풀어냈습니다.
 
 ## API 설계
+
+### API 응답 메시지
+
+```
+@Data
+@AllArgsConstructor
+public class ResponseApiDto<T> {
+
+    private int status; // HTTP코드 
+    private String message; // 서버 메시지
+    private T data; //보낼 데이터
+```
 
 - [[POST]문제 등록](https://github.com/waveofmymind/arh/wiki/%5BPOST%5D-%EB%AC%B8%EC%A0%9C-%EB%93%B1%EB%A1%9D)
 
