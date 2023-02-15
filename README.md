@@ -15,6 +15,8 @@
 
 - 서비스 별 시퀀스 다이어그램 (노션 링크)
 
+- [API 설계](#api-설계)
+
 - 기능 설명(간단히)
 
 - [테스트 코드(단위테스트 , 통합테스트)](#테스트-코드)
@@ -54,6 +56,25 @@
 - Problem - Review: 일대다 관계
 
 - Problem - Problem Tag - Tag: Problem과 Tag는 관계를 직접적으로 연결시킬경우 다대다 관계이기 때문에, 중간에 Problem Tag를 두어 각각 일대다, 다대일로 풀어냈습니다.
+
+## API 설계
+
+- [[POST]문제 등록](https://github.com/waveofmymind/arh/wiki/%5BPOST%5D-%EB%AC%B8%EC%A0%9C-%EB%93%B1%EB%A1%9D)
+
+- [[GET]문제 세부 조회](https://github.com/waveofmymind/arh/wiki/%5BGET%5D-%EB%AC%B8%EC%A0%9C-%EC%84%B8%EB%B6%80-%EC%A1%B0%ED%9A%8C)
+
+- [[GET]문제 전체 조회](https://github.com/waveofmymind/arh/wiki/%5BGET%5D-%EC%A0%84%EC%B2%B4-%EB%AC%B8%EC%A0%9C-%EC%A1%B0%ED%9A%8C)
+
+- [[PUT]문제 수정](https://github.com/waveofmymind/arh/wiki/%5BPUT%5D-%EB%AC%B8%EC%A0%9C-%EC%88%98%EC%A0%95)
+
+- [[DELETE]문제 삭제](https://github.com/waveofmymind/arh/wiki/%5BDELETE%5D-%EB%AC%B8%EC%A0%9C-%EC%82%AD%EC%A0%9C)
+
+- [[POST]리뷰 등록](https://github.com/waveofmymind/arh/wiki/%5BPOST%5D-%EB%A6%AC%EB%B7%B0-%EB%93%B1%EB%A1%9D)
+
+- [[PUT]리뷰 수정]()
+
+- [[DELETE]리뷰 삭제]()
+
 
 
 ## 주요 기능
