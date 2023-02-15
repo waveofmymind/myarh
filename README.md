@@ -94,6 +94,11 @@ tagList는 List<String>의 형태로 request를 받습니다.
 
 ![image](https://user-images.githubusercontent.com/93868431/218665111-9703c539-34ed-4dea-bc81-a052bcd4640f.png)
 
+- 리뷰 등록
+
+![image](https://user-images.githubusercontent.com/93868431/218939715-8d5bfe7b-0318-4e79-ab68-85b2ace10d5e.png)
+
+
 
 ## 기술적 도전
 
