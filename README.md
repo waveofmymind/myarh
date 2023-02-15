@@ -31,13 +31,20 @@
 
 ## 기술 스택
 
-- Java 17
+- Java 17.0.5
 - Spring Boot 3.0.2
 - Spring Data JPA
+- Querydsl
 - MySQL
 - Lombok
 - Validation
 - MapStruct
+
+### Devops
+
+- Github Actions
+- Docker
+-AWS RDS
 
 
 
