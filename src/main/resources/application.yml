@@ -20,6 +20,8 @@ spring:
     open-in-view: true
     hibernate:
       ddl-auto: create
+  profiles:
+    include: oauth
 
 
 logging:
@@ -29,3 +31,5 @@ logging:
         type:
           descriptor:
             sql: trace
+jwt:  #waveofmymind-spring-boot-for-jwt-algorithm-review-board-project-waveofmymind-spring-boot-for-jwt-algorithm-review-board-projectv
+  secret: d2F2ZW9mbXltaW5kLXNwcmluZy1ib290LWZvci1qd3QtYWxnb3JpdGhtLXJldmlldy1ib2FyZC1wcm9qZWN0LXdhdmVvZm15bWluZC1zcHJpbmctYm9vdC1mb3Itand0LWFsZ29yaXRobS1yZXZpZXctYm9hcmQtcHJvamVjdA==

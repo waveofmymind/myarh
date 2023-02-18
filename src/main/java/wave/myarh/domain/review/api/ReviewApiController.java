@@ -1,4 +1,4 @@
-package wave.myarh.domain.review;
+package wave.myarh.domain.review.api;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

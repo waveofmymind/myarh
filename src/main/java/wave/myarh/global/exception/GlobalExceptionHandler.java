@@ -1,4 +1,4 @@
-package wave.myarh.global;
+package wave.myarh.global.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

@@ -41,7 +41,7 @@ class ReviewMapperTest {
                 .build();
         Problem problem = problemMapper.toEntity(requestDto);
         //when
-        Review review = reviewMapper.toEntity(requestDto, problem);
+        Review review = reviewMapper.toEntity(problem, requestDto);
 
         //then
         assertThat(review.getContent()).isEqualTo(requestDto.getContent());
