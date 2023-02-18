@@ -126,6 +126,8 @@ tagList는 List<String>의 형태로 request를 받습니다.
 
 - @ControllerAdvice, @ExceptionHandler를 활용한 예외처리
 
+- 로그인 요청에 대한 필터를 OncePerRequestFilter로 확장하여 구현
+
 
 ## 트러블 슈팅
 
