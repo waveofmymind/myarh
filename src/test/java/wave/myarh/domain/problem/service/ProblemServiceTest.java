@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.transaction.annotation.Transactional;
 import wave.myarh.domain.problem.domain.Problem;
 import wave.myarh.domain.problem.domain.ProblemTag;
@@ -73,8 +74,8 @@ class ProblemServiceTest {
         problem.setProblemTagList(null);
 
         problemRepository.save(problem);
-
-        assertThat(problemRepository.findByOrderByCreatedDateDesc().size())
+        PageRequest page = PageRequest.of(0, 5);
+        assertThat(problemRepository.findByOrderByCreatedDateDesc(page).size())
                 .isEqualTo(1);
 
 
