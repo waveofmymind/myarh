@@ -1,12 +1,14 @@
 package wave.myarh.domain.problem.service;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 import wave.myarh.domain.problem.domain.Problem;
 import wave.myarh.domain.problem.domain.ProblemTag;
@@ -26,6 +28,7 @@ import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
+@Rollback(value = false)
 class ProblemServiceTest {
 
     @Autowired
@@ -37,6 +40,22 @@ class ProblemServiceTest {
 
     @Autowired
     TagRepository tagRepository;
+
+//    @BeforeEach
+//    void beforeEach() {
+//        for (int i = 0; i < 50; i++) {
+//            Problem problem = Problem.builder().build();
+//            Review review = Review.builder()
+//                    .problem(problem)
+//                    .content("테스트"+i)
+//                    .build();
+//
+//            problem.setReview(review);
+//            problem.setProblemTagList(null);
+//            problemRepository.save(problem);
+//        }
+
+//    }
     @Test
     @DisplayName("의존성_주입")
     void 의존성_주입Test() {
@@ -112,5 +131,13 @@ class ProblemServiceTest {
         ProblemResponseDto saveProblem = problemService.getProblemById(problemId);
         assertThat(saveProblem.getProblemTagList().size()).isEqualTo(tagStringList.size());
         assertThat(saveProblem.getReviewList().get(0).getContent()).isEqualTo(requestDto.getContent());
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("문제 삭제 테스트")
+    void 문제_삭제_테스트() {
+        Long targetId = 52L;
+        problemRepository.deleteById(targetId);
     }
 }

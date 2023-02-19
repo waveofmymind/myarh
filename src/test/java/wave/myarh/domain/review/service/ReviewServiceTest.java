@@ -15,7 +15,8 @@ import wave.myarh.domain.review.domain.Review;
 import wave.myarh.domain.review.dto.ReviewRequestDto;
 import wave.myarh.domain.review.repository.ReviewRepository;
 import wave.myarh.global.exception.EntityNotFoundException;
-import wave.myarh.global.exception.ExceptionCode;
+import wave.myarh.global.exception.ErrorCode;
+
 
 import java.util.Optional;
 
@@ -83,7 +84,7 @@ public class ReviewServiceTest {
                 () -> reviewService.addReview(problemId,requestDto));
 
         //then
-        assertThat(e.getMessage()).isEqualTo(ExceptionCode.ENTITY_NOT_FOUND.getMessage());
+        assertThat(e.getMessage()).isEqualTo(ErrorCode.ENTITY_NOT_FOUND.getMessage());
     }
 
 
