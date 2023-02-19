@@ -32,4 +32,11 @@ public class ReviewApiController {
         //todo
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"리뷰_수정_완료"));
     }
+
+    @DeleteMapping("/reviews/{reviewId}")
+    public ResponseEntity<?> deleteReview(@PathVariable("reviewId") Long reviewId) {
+
+        reviewService.deleteReview(reviewId);
+        return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK, "리뷰_삭제_완료"));
+    }
 }
