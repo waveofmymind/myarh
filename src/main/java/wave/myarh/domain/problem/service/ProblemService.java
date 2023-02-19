@@ -3,6 +3,8 @@ package wave.myarh.domain.problem.service;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import wave.myarh.domain.problem.ProblemMapper;
@@ -10,6 +12,7 @@ import wave.myarh.domain.problem.domain.Problem;
 import wave.myarh.domain.problem.domain.ProblemTag;
 import wave.myarh.domain.problem.domain.Tag;
 import wave.myarh.domain.problem.dto.request.ProblemRequestDto;
+import wave.myarh.domain.problem.dto.response.ProblemOnlyDto;
 import wave.myarh.domain.problem.dto.response.ProblemResponseDto;
 import wave.myarh.domain.problem.repository.ProblemRepository;
 import wave.myarh.domain.problem.repository.TagRepository;
@@ -33,7 +36,7 @@ public class ProblemService {
     @Transactional
     public Long registerProblem(ProblemRequestDto requestDto) {
         Problem problem = problemMapper.toEntity(requestDto);
-        Review review = reviewMapper.toEntity(requestDto,problem);
+        Review review = reviewMapper.toEntity(problem, requestDto);
         List<ProblemTag> problemTagList = requestDto.getTagList().stream().map(tagName -> tagRepository.findByTagName(tagName)
                         .map(tag -> new ProblemTag(problem, tag)).orElseGet(
                                 () -> new ProblemTag(problem, new Tag(tagName))))
@@ -50,12 +53,16 @@ public class ProblemService {
         return problemMapper.toDto(problem);
     }
 
-    public List<ProblemResponseDto> getProblemList() {
-        List<Problem> problemList = problemRepository.findByOrderByCreatedDateDesc();
-        return problemList.stream().map(problemMapper::toDto).toList();
+    @Transactional(readOnly = true)
+    public List<ProblemOnlyDto> getProblemList(Pageable pageable) {
+        List<Problem> problems = problemRepository.findByOrderByCreatedDateDesc(pageable);
+        return problems.stream().map(problemMapper::toReviewExcludeDto).toList();
+
     }
 
     //페이징 리스트 todo
+
+
 
 
 

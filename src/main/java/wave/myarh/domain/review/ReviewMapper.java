@@ -10,15 +10,14 @@ import wave.myarh.domain.review.dto.ReviewRequestDto;
 @Mapper(componentModel = "spring")
 public interface ReviewMapper {
 
-    @Mapping(target="problem", source = "problem")
-    @Mapping(target = "id",ignore = true)
-    Review toEntity(ProblemRequestDto requestDto,Problem problem);
+    @Mapping(target = "problem", source = "problem")
+    @Mapping(target = "id", ignore = true)
+    Review toEntity(Problem problem, ProblemRequestDto requestDto);
 
     @Mapping(target = "problem", source = "problem")
     @Mapping(target = "id", ignore = true)
     Review toEntity(Problem problem, ReviewRequestDto requestDto);
 
-    //문제 수정할 때
     @Mapping(target = "problem", ignore = true)
     @Mapping(target = "id", source = "id")
     Review toEntity(Long id, ReviewRequestDto requestDto);

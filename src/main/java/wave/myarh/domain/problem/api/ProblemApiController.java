@@ -1,10 +1,12 @@
 package wave.myarh.domain.problem.api;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import wave.myarh.domain.problem.dto.request.ProblemRequestDto;
+import wave.myarh.domain.problem.dto.response.ProblemOnlyDto;
 import wave.myarh.domain.problem.dto.response.ProblemResponseDto;
 import wave.myarh.domain.problem.service.ProblemService;
 import wave.myarh.global.dto.ResponseApiDto;
@@ -32,9 +34,9 @@ public class ProblemApiController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getProblemList() {
-        List<ProblemResponseDto> problemDtoList = problemService.getProblemList();
+    public ResponseEntity<?> getProblemList(@RequestParam("page") int size) {
 
+        List<ProblemOnlyDto> problemDtoList = problemService.getProblemList(PageRequest.of(0,size));
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_전체_조회_성공",problemDtoList));
     }
 

@@ -1,4 +1,4 @@
-package wave.myarh.domain.review;
+package wave.myarh.domain.review.api;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -31,5 +31,12 @@ public class ReviewApiController {
                                           @RequestBody @Valid ReviewRequestDto requestDto) {
         //todo
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"리뷰_수정_완료"));
+    }
+
+    @DeleteMapping("/reviews/{reviewId}")
+    public ResponseEntity<?> deleteReview(@PathVariable("reviewId") Long reviewId) {
+
+        reviewService.deleteReview(reviewId);
+        return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK, "리뷰_삭제_완료"));
     }
 }
