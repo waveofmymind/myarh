@@ -96,9 +96,6 @@ public class ResponseApiDto<T> {
 
 ### 문제 등록(+리뷰 등록)
 
-문제 등록의 경우 title,link,level,tagList,content를 받습니다. 
-tagList는 List<String>의 형태로 request를 받습니다.
-
 - 문제 삭제
 
 - 문제 수정
