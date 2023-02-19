@@ -2,7 +2,7 @@ version: '3'
 
 services:
   database:
-    container_name: mysql
+    container_name: mysql_db
     image: mysql/latest
     restart: always
     environment:
@@ -27,9 +27,9 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/arh
-      SPRING_DATASOURCE_USERNAME: "root"
-      SPRING_DATASOURCE_PASSWORD: "1234"
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/arh
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 0913
     depends_on:
       - database
     networks:
