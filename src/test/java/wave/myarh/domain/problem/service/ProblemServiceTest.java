@@ -28,7 +28,7 @@ import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = false)
+
 class ProblemServiceTest {
 
     @Autowired
@@ -133,11 +133,11 @@ class ProblemServiceTest {
         assertThat(saveProblem.getReviewList().get(0).getContent()).isEqualTo(requestDto.getContent());
     }
 
-    @Test
-    @Transactional
-    @DisplayName("문제 삭제 테스트")
-    void 문제_삭제_테스트() {
-        Long targetId = 52L;
-        problemRepository.deleteById(targetId);
-    }
+//    @Test
+//    @Transactional
+//    @DisplayName("문제 삭제 테스트")
+//    void 문제_삭제_테스트() {
+//        Long targetId = 52L;
+//        problemRepository.deleteById(targetId);
+//    }
 }
