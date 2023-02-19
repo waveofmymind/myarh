@@ -41,9 +41,3 @@ springdoc:
     try-it-out-enabled: false
   version: 'v1'
 
-secrets:
-  DOCKER_USERNAME: 'waveofmymind'
-  DOCKER_PASSWORD: 'k2j7h5e1@'
-  DOCKER_REPO: 'waveofmymind/arh'
-  EC2_WAS_IP: '43.200.125.149'
-  PRIVATE_KEY:
