@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  database:
+    container_name: mysql
+    image: mysql/latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: arh
+      MYSQL_ROOT_HOST: root
+      MYSQL_ROOT_PASSWORD: 0913
+      TZ: 'Asia/Seoul'
+    ports:
+      - "3306:3306"
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    networks:
+      - wave-net
+
+  application:
+    container_name: arh
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/arh
+      SPRING_DATASOURCE_USERNAME: "root"
+      SPRING_DATASOURCE_PASSWORD: "1234"
+    depends_on:
+      - database
+    networks:
+      - wave-net
+
+networks:
+  wave-net:

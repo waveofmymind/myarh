@@ -21,12 +21,10 @@ public class ProblemOnlyDto {
 
     private String link;
 
-    private int step;
-
-    private LocalDate notificationDate;
+    private int level;
 
     private LocalDateTime modifiedDate;
 
     @JsonIgnoreProperties({"problem"})
-    private List<ProblemTag> tagList;
+    private List<ProblemTag> problemTagList;
 }

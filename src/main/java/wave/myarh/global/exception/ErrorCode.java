@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 
 @AllArgsConstructor
 @Getter
-public enum ExceptionCode {
+public enum ErrorCode {
 
     // Common
     ENTITY_NOT_FOUND(HttpStatus.BAD_REQUEST, "Entity Not Found"),
