@@ -44,6 +44,7 @@
 - Lombok
 - Validation
 - MapStruct
+- Swagger
 
 ### Devops
 
