@@ -29,7 +29,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/arh
       SPRING_DATASOURCE_USERNAME: "root"
-      SPRING_DATASOURCE_PASSWORD: "1234"
+      SPRING_DATASOURCE_PASSWORD: 1234
     depends_on:
       - database
     networks:
