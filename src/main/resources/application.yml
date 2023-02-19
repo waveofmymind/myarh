@@ -36,8 +36,7 @@ jwt:  #waveofmymind-spring-boot-for-jwt-algorithm-review-board-project-waveofmym
 
 springdoc:
   swagger-ui:
-    enabled: true #// swagger ui 사용여부 (굳이 설정하지 않아도 default는 true)
-  version: 'v1' // API 문서 버전
-  default-consumes-media-type: application/json // 기본 consume media type
-  default-produces-media-type: application/json // 기본 produce media type
-  model-and-view-allowed: true #// ModelAndView 허용
+    enabled: true
+    path: '/swagger-ui.html'
+    try-it-out-enabled: false
+  version: 'v1'
