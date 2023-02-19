@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${spring.datasource.url}
-    username: ${spring.datasource.username}
-    password: ${spring.datasource.password}
+    url: jdbc:mysql://wavedatabase.cpg0bs4xqbye.ap-northeast-2.rds.amazonaws.com:3306/arh
+    username: waveofmymind
+    password: 09139349
 
   mvc:
     path match:
