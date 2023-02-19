@@ -2,7 +2,7 @@ version: '3'
 
 services:
   database:
-    container_name: mysql
+    container_name: mysql_db
     image: mysql/latest
     restart: always
     environment:
@@ -19,7 +19,7 @@ services:
       - wave-net
 
   application:
-    container_name: arh
+    container_name: application
     restart: always
     build:
       context: ./
