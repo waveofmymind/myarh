@@ -49,9 +49,8 @@
 ### Devops
 
 - Github Actions
-- Travis CI
 - Docker
--AWS RDS
+- AWS RDS
 
 
 
