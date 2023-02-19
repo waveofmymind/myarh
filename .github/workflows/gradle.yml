@@ -32,18 +32,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-
+      
       - name: gradlew 권한 설정
         run: chmod +x gradlew
         shell: bash
-
+      
       - name: gradlew 빌드
         run : ./gradlew clean build --exclude-task test
         shell: bash
       # docker 이미지 빌드
-      - name: 도커 build & 도커 허브 push
-        run: |
-          docker login -u ${{ waveofmymind }} -p ${{ k2j7h5e1@ }}
-          docker build -t ${{ waveofmymind }}/${{ arh }} .
-          docker push ${{ waveofmymind }}/${{ arh }}
-      #todo
