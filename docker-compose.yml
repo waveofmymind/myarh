@@ -19,7 +19,7 @@ services:
       - wave-net
 
   application:
-    container_name: arh
+    container_name: application
     restart: always
     build:
       context: ./
@@ -30,6 +30,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/arh
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 0913
+
     depends_on:
       - database
     networks:
