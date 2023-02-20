@@ -54,7 +54,7 @@
 
 ## 아키텍처
 
-![image](https://user-images.githubusercontent.com/93868431/219997211-5b067d93-90bc-4491-be11-61e0af173a39.png)
+![image](https://user-images.githubusercontent.com/93868431/219997375-f33ffbab-1e73-4865-9f8f-1179667c4c53.png)
 
 
 
