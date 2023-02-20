@@ -79,21 +79,21 @@ public class ResponseApiDto<T> {
     private T data; //보낼 데이터
 ```
 
-- [[POST]문제 등록](https://github.com/waveofmymind/arh/wiki/%5BPOST%5D-%EB%AC%B8%EC%A0%9C-%EB%93%B1%EB%A1%9D)
+- [[POST]문제 등록](https://github.com/waveofmymind/myarh/wiki/%5BPOST%5D%EB%AC%B8%EC%A0%9C-%EB%93%B1%EB%A1%9D)
 
-- [[GET]문제 세부 조회](https://github.com/waveofmymind/arh/wiki/%5BGET%5D-%EB%AC%B8%EC%A0%9C-%EC%84%B8%EB%B6%80-%EC%A1%B0%ED%9A%8C)
+- [[GET]문제 상세 조회](https://github.com/waveofmymind/myarh/wiki/%5BGET%5D-%EB%AC%B8%EC%A0%9C-%EC%83%81%EC%84%B8-%EC%A1%B0%ED%9A%8C)
 
-- [[GET]문제 전체 조회](https://github.com/waveofmymind/arh/wiki/%5BGET%5D-%EC%A0%84%EC%B2%B4-%EB%AC%B8%EC%A0%9C-%EC%A1%B0%ED%9A%8C)
+- [[GET]문제 전체 조회](https://github.com/waveofmymind/myarh/wiki/%5BGET%5D-%EC%A0%84%EC%B2%B4-%EB%AC%B8%EC%A0%9C-%EC%A1%B0%ED%9A%8C)
 
-- [[PUT]문제 수정](https://github.com/waveofmymind/arh/wiki/%5BPUT%5D-%EB%AC%B8%EC%A0%9C-%EC%88%98%EC%A0%95)
+- [[PUT]문제 수정](https://github.com/waveofmymind/myarh/wiki/%5BPUT%5D-%EB%AC%B8%EC%A0%9C-%EC%88%98%EC%A0%95)
 
-- [[DELETE]문제 삭제](https://github.com/waveofmymind/arh/wiki/%5BDELETE%5D-%EB%AC%B8%EC%A0%9C-%EC%82%AD%EC%A0%9C)
+- [[DELETE]문제 삭제](https://github.com/waveofmymind/myarh/wiki/%5BDELETE%5D-%EB%AC%B8%EC%A0%9C-%EC%82%AD%EC%A0%9CC)
 
-- [[POST]리뷰 등록](https://github.com/waveofmymind/arh/wiki/%5BPOST%5D-%EB%A6%AC%EB%B7%B0-%EB%93%B1%EB%A1%9D)
+- [[POST]리뷰 등록](https://github.com/waveofmymind/myarh/wiki/%5BPOST%5D-%EB%A6%AC%EB%B7%B0-%EB%93%B1%EB%A1%9D)
 
 - [[PUT]리뷰 수정]()
 
-- [[DELETE]리뷰 삭제]()
+- [[DELETE]리뷰 삭제](https://github.com/waveofmymind/myarh/wiki/%5BDELETE%5D-%EB%A6%AC%EB%B7%B0-%EC%82%AD%EC%A0%9C)
 
 
 
