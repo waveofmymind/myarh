@@ -52,6 +52,9 @@
 - Docker
 - AWS RDS
 
+## 아키텍처
+
+![image](https://user-images.githubusercontent.com/93868431/219997211-5b067d93-90bc-4491-be11-61e0af173a39.png)
 
 
 
