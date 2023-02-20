@@ -50,6 +50,7 @@
 
 - Github Actions
 - Docker
+- AWS EC2
 - AWS RDS
 
 ## 아키텍처
