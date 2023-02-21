@@ -13,6 +13,7 @@
 - 해결한 문제를 코드와 풀이를 함께 저장합니다.
 - 태그와 난이도를 함께 등록하여 태그별 조회, 난이도별 조회를 할 수 있습니다.
 - 알림 시간을 설정하여 슬랙으로 복습을 할 시간에 알림을 받을 수 있습니다.
+- 권한이 없을 경우 문제 수정 및 삭제, 리뷰 등록, 수정 및 삭제 기능이 제한됩니다.
 
 
 
@@ -124,6 +125,11 @@ public class ResponseApiDto<T> {
 ![image](https://user-images.githubusercontent.com/93868431/218939715-8d5bfe7b-0318-4e79-ab68-85b2ace10d5e.png)
   
 ![image](https://user-images.githubusercontent.com/93868431/218949229-7baebdeb-c37a-4b51-93db-86014f4f07c0.png)
+
+- 통합 테스트
+
+![image](https://user-images.githubusercontent.com/93868431/220392393-f6026112-46f7-42c5-ba39-6a52f8c4f996.png)
+
 
 
 
