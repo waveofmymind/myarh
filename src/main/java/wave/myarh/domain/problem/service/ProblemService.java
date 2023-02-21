@@ -1,6 +1,5 @@
 package wave.myarh.domain.problem.service;
 
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -18,6 +17,7 @@ import wave.myarh.domain.problem.repository.ProblemRepository;
 import wave.myarh.domain.problem.repository.TagRepository;
 import wave.myarh.domain.review.ReviewMapper;
 import wave.myarh.domain.review.domain.Review;
+import wave.myarh.global.exception.EntityNotFoundException;
 
 import java.util.List;
 import java.util.Optional;
