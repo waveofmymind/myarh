@@ -130,11 +130,11 @@ public class ResponseApiDto<T> {
 
 ## 기술적 도전
 
-- @ControllerAdvice, @ExceptionHandler를 활용한 예외처리
+- 레이어간 객체를 넘길때 엔티티에 대한 의존성을 낮추기 위해 DTO를 사용했다. 이때 엔티티 - DTO간에 변환할때 어느 한 쪽에 변환 메서드를 두게 되면 의존성이 생기므로, Mapstruct를 이용하여 제 3의 클래스에서 레이어간 객체 변환을 담당한다.
 
-- 로그인 요청에 대한 필터를 OncePerRequestFilter로 확장하여 구현
+- Spring AOP를 이용하여 비즈니스 예외에 대해 GlobalExceptionHandler 한 클래스에서 모두 처리하도록 유지보수성을 높였다.
 
-- Sl4fj 로그를 더 관리하기 용이하도록 Slack Bot을 이용해 슬랙으로 알림을 받도록 했다.
+- Sl4fj 로그를 더 관리하기 용이하도록 에러가 났을때 Slack Bot을 통해 슬랙으로 알림을 받도록 했다.
 
 - Authorization Code로 권한을 체크할때, Spring AOP를 이용하여 권한 체크 커스텀 어노테이션을 구현
 
