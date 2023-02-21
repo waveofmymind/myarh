@@ -136,6 +136,10 @@ public class ResponseApiDto<T> {
 
 - Sl4fj 로그를 더 관리하기 용이하도록 에러가 났을때 Slack Bot을 통해 슬랙으로 알림을 받도록 했다.
 
+- Docker 를 사용하여 OS 관계없이 동일한 환경을 제공 한다.
+
+- GitHub Actions 를 이용하여  브랜치에 푸시 , PR 행위가 발생할 경우 workflows 를 따라 자동 배포 진행 + 테스트 코드가 실패할 경우 에러가 발생해 배포 불가
+
 - Authorization Code로 권한을 체크할때, Spring AOP를 이용하여 권한 체크 커스텀 어노테이션을 구현하여 권한 체크를 하는 모듈을 분리했다.
 
 
