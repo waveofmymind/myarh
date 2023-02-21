@@ -128,9 +128,7 @@ public class ResponseApiDto<T> {
 
 - 통합 테스트
 
-![image](https://user-images.githubusercontent.com/93868431/220392393-f6026112-46f7-42c5-ba39-6a52f8c4f996.png)
-
-
+![스크린샷 2023-02-22 오전 12 45 40](https://user-images.githubusercontent.com/93868431/220482803-85accc0c-7e5a-4d02-9bff-46dbc420f789.png)
 
 
 
@@ -159,9 +157,9 @@ public class ResponseApiDto<T> {
 
   -> mapstruct의 @Mapper를 이용하여 제 3자의 클래스에서 엔티티 <-> DTO를 변환시킬수 있도록  역할을 분리했다.
   
-- JPA 사용중 문제를 조회하고 리뷰를 선택할 때, 쿼리 N+1 문제가 발생했다.
+- 문제를 전체 조회할 때 예상치 못한 쿼리 N+1 문제
 
-  -> 문제를 조회할 때, 해당 문제에 대한 리뷰 객체가 항상 필요하다고 생각하여 페치 조인을 사용하여 리뷰에 대해서 한꺼번에 조회하도록 했다.
+  -> 문제를 전체 조회할 때에는 Review를 모두 조회할 필요가 없다고 생각해서 연관관계를 모두 지연 로딩으로 하였고, 문제만을 조회할 수 있는 Dto를 만들었다.
   
 - 문제를 전체 조회할 때에는 리뷰리스트는 보여질 필요가 없으므로 ProblemOnlyDto를 따로 두었다. 
 
