@@ -12,7 +12,7 @@
 
 - 해결한 문제를 코드와 풀이를 함께 저장합니다.
 - 태그와 난이도를 함께 등록하여 태그별 조회, 난이도별 조회를 할 수 있습니다.
-- 알림 시간을 설정하여 원하는 시간 알림을 받을 수 있습니다.
+- 알림 시간을 설정하여 슬랙으로 복습을 할 시간에 알림을 받을 수 있습니다.
 
 
 
@@ -133,6 +133,10 @@ public class ResponseApiDto<T> {
 - @ControllerAdvice, @ExceptionHandler를 활용한 예외처리
 
 - 로그인 요청에 대한 필터를 OncePerRequestFilter로 확장하여 구현
+
+- Sl4fj 로그를 더 관리하기 용이하도록 Slack Bot을 이용해 슬랙으로 알림을 받도록 했다.
+
+- Authorization Code로 권한을 체크할때, Spring AOP를 이용하여 권한 체크 커스텀 어노테이션을 구현
 
 
 ## 트러블 슈팅
