@@ -3,6 +3,7 @@ package wave.myarh.domain.problem.domain;
 import jakarta.persistence.*;
 import lombok.*;
 import wave.myarh.domain.BaseEntity;
+import wave.myarh.domain.member.domain.Member;
 import wave.myarh.domain.review.domain.Review;
 
 
@@ -23,6 +24,10 @@ public class Problem extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="problem_id")
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name="member_id",updatable = false)
+    private Member writer;
 
     private String title;
 

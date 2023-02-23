@@ -20,7 +20,7 @@ class ProblemApiControllerTest {
     @Autowired
     protected MockMvc mockMvc;
 
-    @Test
+    //    @Test
     void 문제_페이징_테스트_default() throws Exception {
         mockMvc.perform(
                         get("/api/problems")

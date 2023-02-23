@@ -1,17 +1,22 @@
 package wave.myarh.domain.problem.api;
 
+
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import wave.myarh.domain.member.domain.Member;
 import wave.myarh.domain.problem.dto.request.ProblemRequestDto;
 import wave.myarh.domain.problem.dto.response.ProblemOnlyDto;
 import wave.myarh.domain.problem.dto.response.ProblemResponseDto;
 import wave.myarh.domain.problem.service.ProblemService;
+import wave.myarh.global.auth.MemberContext;
 import wave.myarh.global.dto.ResponseApiDto;
 
 import java.util.List;
+
 
 @RequiredArgsConstructor
 @RestController
@@ -22,7 +27,8 @@ public class ProblemApiController {
 
     @PostMapping
     public ResponseEntity<?> addProblem(@RequestBody ProblemRequestDto requestDto) {
-        Long problemId = problemService.registerProblem(requestDto);
+        Member member = MemberContext.currentMember.get();
+        Long problemId = problemService.registerProblem(requestDto,member);
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_등록_성공",problemId));
     }
 
@@ -42,7 +48,9 @@ public class ProblemApiController {
 
     @DeleteMapping("/{problemId}")
     public ResponseEntity<?> deleteProblem(@PathVariable("problemId") Long problemId) {
-        problemService.deleteProblem(problemId);
+        Member member = MemberContext.currentMember.get();
+
+        problemService.deleteProblem(problemId,member);
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"문제_삭제_성공"));
     }
 }
