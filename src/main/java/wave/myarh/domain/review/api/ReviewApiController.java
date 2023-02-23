@@ -5,9 +5,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import wave.myarh.domain.member.domain.Member;
 import wave.myarh.domain.problem.service.ProblemService;
 import wave.myarh.domain.review.dto.ReviewRequestDto;
 import wave.myarh.domain.review.service.ReviewService;
+import wave.myarh.global.auth.MemberContext;
 import wave.myarh.global.dto.ResponseApiDto;
 
 @RestController
@@ -21,7 +23,8 @@ public class ReviewApiController {
     @GetMapping("/problems/{problemId}/reviews")
     public ResponseEntity<?> addReview (@PathVariable("problemId") Long problemId,
                                                      @RequestBody ReviewRequestDto requestDto) {
-        reviewService.addReview(problemId,requestDto);
+        Member member = MemberContext.currentMember.get();
+        reviewService.addReview(problemId,requestDto,member);
         return ResponseEntity.ok().body(ResponseApiDto.of(HttpStatus.OK,"리뷰_등록_성공"));
     }
 

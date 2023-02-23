@@ -41,3 +41,11 @@ springdoc:
     try-it-out-enabled: false
   version: 'v1'
 
+social:
+  google:
+    client_id: 366159545983-nl6bar291pul2c98oo6ijqtrk1f8n74j.apps.googleusercontent.com
+    secret_key: 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
+    redirect_uri: http://127.0.0.1:8080/user/google/callback
+    token_request_url: https://oauth2.googleapis.com/token
+    profile_request_url: https://www.googleapis.com/oauth2/v3/userinfo
+

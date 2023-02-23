@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.transaction.annotation.Transactional;
+import wave.myarh.domain.member.domain.Member;
 import wave.myarh.domain.problem.domain.Problem;
 import wave.myarh.domain.problem.repository.ProblemRepository;
 import wave.myarh.domain.review.ReviewMapper;
@@ -16,6 +17,7 @@ import wave.myarh.domain.review.dto.ReviewRequestDto;
 import wave.myarh.domain.review.repository.ReviewRepository;
 import wave.myarh.global.exception.EntityNotFoundException;
 import wave.myarh.global.exception.ErrorCode;
+import wave.myarh.global.exception.UserAuthenticationException;
 
 
 import java.util.Optional;
@@ -41,8 +43,15 @@ public class ReviewServiceTest {
     @Mock
     private ReviewMapper reviewMapper;
 
+    final Member member = Member.builder()
+            .id(1L)
+            .email("test")
+            .nickname("test")
+            .build();
+
     void setup() {
         final Problem problem = Problem.builder()
+                .writer(member)
                 .build();
 
         given(problemRepository.findById(1L)).willReturn(Optional.of(problem));
@@ -65,7 +74,7 @@ public class ReviewServiceTest {
                 .content("리뷰 테스트입니다.")
                 .build();
         //when
-        reviewService.addReview(problemId,requestDto);
+        reviewService.addReview(problemId,requestDto,member);
     }
 
     @Test
@@ -81,10 +90,32 @@ public class ReviewServiceTest {
 
         //when
         EntityNotFoundException e = assertThrows(EntityNotFoundException.class,
-                () -> reviewService.addReview(problemId,requestDto));
+                () -> reviewService.addReview(problemId,requestDto,member));
 
         //then
         assertThat(e.getMessage()).isEqualTo(ErrorCode.ENTITY_NOT_FOUND.getMessage());
+    }
+
+    @Test
+    @DisplayName("리뷰 등록 실패_권한 없는 경우")
+    void 리뷰_등록_권한X_테스트() {
+        setup();
+        //given
+        final Member member = Member.builder()
+                .build();
+
+        Long problemId = 1L;
+
+        final ReviewRequestDto requestDto = ReviewRequestDto.builder()
+                .content("리뷰 등록 테스트")
+                .build();
+
+        // when
+        UserAuthenticationException e = assertThrows(UserAuthenticationException.class,
+                () -> reviewService.addReview(problemId, requestDto, member)); // 예외가 발생해야 한다.
+
+        //then
+        assertThat(e.getMessage()).isEqualTo(ErrorCode.NOT_VALID_USER.getMessage());
     }
 
 

@@ -126,7 +126,7 @@ class ProblemServiceTest {
                 .tagList(tagStringList)
                 .content("테스트")
                 .build();
-        Long problemId = problemService.registerProblem(requestDto);
+        Long problemId = problemService.registerProblem(requestDto,null);
 
         ProblemResponseDto saveProblem = problemService.getProblemById(problemId);
         assertThat(saveProblem.getProblemTagList().size()).isEqualTo(tagStringList.size());
